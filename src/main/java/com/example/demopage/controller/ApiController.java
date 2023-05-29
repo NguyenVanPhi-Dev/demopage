@@ -44,5 +44,7 @@ public class ApiController {
     public Tables addTable(@Valid @RequestBody Tables tables){
         return tableRepository.save(tables);
     }
-
+    @PostMapping("addDish")
+    public Dish addDish(@Valid @RequestBody Dish dish) { return dishRepository.save(dish);}
 }
+
